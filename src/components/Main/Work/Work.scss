@@ -1,0 +1,140 @@
+.work {
+  width: 70%;
+  background-color: #131313;
+  padding: 15px;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media (max-width: 950px) {
+    width: 100%;    
+  
+  }
+}
+.experience {
+  &-item {
+    border-bottom: 2px dashed #fff;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    &:last-child {
+      border-bottom: none;
+    }
+    &__date {
+      text-align: center;
+      flex: 0 0 135px;
+    }
+    &__title {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+    &__subtitle {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+    &__text {
+      font-size: 15px;
+      line-height: 20px;
+      & a {
+        text-decoration: underline;
+        color: inherit;
+        font-size: 18px;
+        transition: 0.2s;
+        &:hover {
+          color: rgba(255, 255, 255, 0.7);
+        }
+      }
+    }
+  }
+}
+.example {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  &__image {
+    width: 300px;
+    height: auto;
+    transition: all 0.3s;
+    margin: 15px;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+.about-me {
+  font-size: 18px;
+  line-height: 25px;
+  & span {
+    font-size: 22px;
+  }
+}
+.soft-skills {
+  width: 295px;
+  margin: 0 auto;
+  overflow: hidden;
+  &__track {
+    display: flex;
+    transition: all 0.5s ease;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 255px;
+    font-size: 32px;
+    letter-spacing: 0.4px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    margin: 0 20px;
+    @media (max-width: 660px) {
+      font-size: 22px;
+      padding: 10px 5px;
+     }
+  }
+}
+.hard-skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  &__item {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+  }
+  &__title {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  &__dots {
+    width: 60px;
+  }
+  &__dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000;
+    margin: 2px;
+    &.yes {
+      animation-name: showDots;
+      animation-duration:4s;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+@keyframes showDots {
+  0% {
+    box-shadow: 0 0 5px black;
+  }
+  50% {
+    box-shadow: 0 0 5px white;
+  }
+  100% {
+    box-shadow: 0 0 5px black;
+  }
+}

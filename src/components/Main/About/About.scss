@@ -1,0 +1,167 @@
+.about {
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.01);
+  border-right: 3px solid #fff;
+  @media (max-width: 950px) {
+    width: 100%;    
+    max-width: 500px;
+    margin: 0 auto;
+    border-right: none;
+  }
+
+  &-item {
+    padding: 20px 5px;
+    position: relative;
+    transition: all 0.3s ;
+    &__title {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 15px;
+      cursor: pointer;
+    }
+    &:after {
+      content: "";
+      width: 50%;
+      height: 1px;
+      background-color: white;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &:last-child:after {
+      display: none;
+    }
+  }
+}
+
+.contacts {
+  &-item {
+    display: flex;
+    padding: 5px 0;
+    @media (max-width: 950px) {
+      justify-content: center;
+    }
+    &__icon {
+      width: 25px;
+    }
+    &__text a {
+      color: white;
+      transition: 0.2s;
+      &:hover {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+}
+.courses {
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #fff;
+    @media (max-width: 950px) {
+     max-width: 300px;
+      margin: 0 auto;
+    }
+    &__text {
+      max-width: 210px;
+      text-align: right;
+    }
+    &__teacher {
+      display: inline-block;
+      margin: 3px 0;
+    }
+    &__year {
+      margin-right: 7px;
+    }
+    &__title {
+      word-wrap: break-word;
+    }
+    &__link {
+      word-wrap: break-word;
+      color: inherit;
+      transition: 0.3s;
+      text-decoration: underline;
+      &:hover {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+}
+.languages {
+  &-item {
+    margin: 20px 0;
+    @media (max-width: 950px) {
+      max-width: 300px;
+       margin: 0 auto;
+     }
+    &__title {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    &__level {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+    &__dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #131313;
+      & + .languages-item__dot {
+        margin-left: 5px;
+      }
+      &.yes {
+        animation-name: showDots;
+        animation-duration:4s;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+}
+
+
+.certificate {
+  text-align: center;
+  &__image {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+
+  }
+}
+
+.education {
+  text-align: center;
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 0;
+  }
+  &__subtitle {
+    margin: 5px 0;
+  }
+
+}
+@keyframes showDots {
+  0% {
+    box-shadow: 0 0 7px black;
+  }
+  50% {
+    box-shadow: 0 0 7px white;
+  }
+  100% {
+    box-shadow: 0 0 7px black;
+  }
+}
+.contacts-enter {
+  opacity: 0;
+}
+.contacts-enter-active {
+  opacity: 1;
+  transition: opacity 5000ms ease-in;
+}
